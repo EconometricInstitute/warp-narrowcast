@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,16 +19,21 @@
 
 
 <div class="container">
-    <h2>Empty Rooms Today (<span th:text="${rooms.size()}"></span>)</h2>
+    <h2>Empty Rooms Today (<span th:text="${rooms.size()}"></span> rooms)</h2>
 
     <div th:if="${rooms.isEmpty()}">
         <h4>No empty rooms today!</h4>
     </div>
-    <ul class="collection" th:else>
-        <li class="collection-item flow-text" th:each="room : ${rooms}" th:text="${room}">
+    <div class="rooms" th:else>
+        <div class="room flow-text" th:each="room : ${rooms}" th:text="${room}">
             Some room
-        </li>
-    </ul>
+        </div>
+    </div>
+<!--    <ul class="collection" >-->
+<!--        <li class="collection-item flow-text" th:each="room : ${rooms}" th:text="${room}">-->
+<!--            Some room-->
+<!--        </li>-->
+<!--    </ul>-->
 </div>
 
 <!-- Compiled and minified JavaScript -->

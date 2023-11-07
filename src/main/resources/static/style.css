@@ -1,0 +1,38 @@
+.content {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 80vh;
+    align-content: center;
+}
+.entry {
+    padding: 0.5em;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    border: black solid 1px;
+    padding: 0.25em 1em 0.25em 1em;
+    margin: 0.1em;
+}
+.location div {
+    display: inline-block;
+}
+
+.location .room {
+    padding-left: 2em;
+}
+
+.rooms {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.room {
+    border: black solid 1px;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+    font-size: 250%;
+}
