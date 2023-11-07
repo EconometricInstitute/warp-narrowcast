@@ -44,7 +44,7 @@ public class RoomService {
                     .map(book -> book.getUser().getName())
                     .distinct()
                     .sorted()
-                    .toList();
+                    .collect(Collectors.toList());
             result.put(entry.getKey(), users);
         }
         return result;
@@ -67,7 +67,7 @@ public class RoomService {
                     .map(book -> book.getSeat().getRoom())
                     .distinct()
                     .sorted()
-                    .toList();
+                    .collect(Collectors.toList());
             result.put(entry.getKey(), users);
         }
         return result;

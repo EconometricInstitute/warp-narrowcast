@@ -22,12 +22,12 @@
 
 
 <div class="container flow-text">
-    <h2>Current Room Occupants</h2>
+    <h2 class="title">Current Room Occupants</h2>
     <div class="content">
-        <div class="entry" th:each="entry : ${entries}">
-            <h4 th:text="${entry.key}">Some room</h4>
-            <ul class="collection">
-                <li class="collection-item" th:each="user : ${entry.value}" th:text="${user}">Some user</li>
+        <div class="occupants entry" th:each="entry : ${entries}">
+            <div class="room-label" th:text="${entry.key}">Some room</div>
+            <ul>
+                <li th:each="user : ${entry.value}" th:text="${user}">Some user</li>
             </ul>
         </div>
     </div>

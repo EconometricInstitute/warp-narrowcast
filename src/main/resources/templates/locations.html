@@ -22,7 +22,7 @@
 
 
 <div class="container flow-text">
-    <h2>Current Locations</h2>
+    <h2 class="title">Current Locations</h2>
 
 <!--    <div class="row">-->
 <!--        <div class="col s3" th:each="entry : ${entries}">-->
@@ -36,7 +36,7 @@
     <div class="content">
         <div class="location" th:each="entry : ${entries}">
             <div class="user" th:text="${entry.key}">Some user</div>
-            <div class="room" th:each="room : ${entry.value}" th:text="${room}">Some room</div>
+            <div class="room-inline" th:each="room : ${entry.value}" th:text="${room}">Some room</div>
         </div>
     </div>
 

@@ -4,14 +4,36 @@
     max-height: 80vh;
     align-content: center;
 }
+
+.title {
+    text-align: center;
+}
+
 .entry {
     padding: 0.5em;
 }
 
+.occupants {
+    border: black solid 1px;
+    border-radius: 0.2em;
+    margin: 0.1em;
+}
+
+.occupants ul {
+    margin: 0.2em 0 0 0;
+}
+
+.occupants .room-label {
+    font-size: 125%;
+    font-weight: bold;
+}
+
 .location {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     border: black solid 1px;
+    border-radius: 0.2em;
     padding: 0.25em 1em 0.25em 1em;
     margin: 0.1em;
 }
@@ -19,7 +41,7 @@
     display: inline-block;
 }
 
-.location .room {
+.location .room-inline {
     padding-left: 2em;
 }
 
@@ -31,8 +53,10 @@
 
 .room {
     border: black solid 1px;
+    border-radius: 0.3em;
     padding: 1em;
     text-align: center;
     margin: 1em;
     font-size: 250%;
+    font-weight: bold;
 }
