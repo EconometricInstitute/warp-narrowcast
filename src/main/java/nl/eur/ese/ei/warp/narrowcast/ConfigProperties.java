@@ -27,10 +27,9 @@ public class ConfigProperties {
 
 
     public long getDatabaseNowTimestamp() {
-        long result = OffsetDateTime.now(applicationTimezone)
+        return OffsetDateTime.now(applicationTimezone)
                 .atZoneSimilarLocal(databaseTimezone)
                 .toEpochSecond();
-        return result;
     }
 
     public long getDatabaseTimestamp(OffsetDateTime time) {

@@ -1,6 +1,5 @@
 package nl.eur.ese.ei.warp.narrowcast;
 
-import nl.eur.ese.ei.warp.narrowcast.RoomService;
 import nl.eur.ese.ei.warp.narrowcast.entities.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

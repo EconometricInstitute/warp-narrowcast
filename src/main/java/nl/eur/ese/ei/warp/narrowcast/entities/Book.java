@@ -5,7 +5,6 @@ import nl.eur.ese.ei.warp.narrowcast.ConfigProperties;
 
 import java.time.Instant;
 import java.time.OffsetDateTime;
-import java.time.ZoneId;
 import java.util.Comparator;
 
 @Entity
@@ -76,7 +75,7 @@ public class Book implements Comparable<Book> {
         FROM(Comparator.naturalOrder()),
         UNTIL(Comparator.comparing(Book::getUntilTimestamp));
 
-        private Comparator<Book> order;
+        private final Comparator<Book> order;
         BookOrder(Comparator<Book> comparator) {
             this.order = comparator.thenComparing(Comparator.naturalOrder());
         }
