@@ -13,11 +13,16 @@ import java.util.Set;
 @Profile("api")
 @Controller
 public class ApiController {
-    private RoomService roomService;
+    private final RoomService roomService;
 
     @Autowired
     public ApiController(RoomService roomService) {
         this.roomService = roomService;
+    }
+
+    @GetMapping("/api/today")
+    public ResponseEntity<Set<Book>> getToday() {
+        return ResponseEntity.ok(roomService.getActiveBookingsToday());
     }
 
     @GetMapping("/api/current")

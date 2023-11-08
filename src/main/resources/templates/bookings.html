@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Today's Bookings</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Auto refresh after one minute-->
+    <meta http-equiv="refresh" content="60">
+
+</head>
+<body>
+
+
+<div class="container flow-text">
+    <h2 class="title">Today's Bookings</h2>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col"><a href="?order=NAME">Name</a></th>
+                <th scope="col"><a href="?order=ROOM">Office</a></th>
+                <th scope="col"><a href="?order=FROM">From</a></th>
+                <th scope="col"><a href="?order=UNTIL">Until</a></th>
+                <th th:if="${timestamps}" scope="col">From (ts)</th>
+                <th th:if="${timestamps}" scope="col">Until (ts)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="book : ${bookings}">
+                <td th:text="${book.getUser().getName()}">Some name</td>
+                <td th:text="${book.getSeat().getRoom()}">Some office</td>
+                <td th:text="${#temporals.format(book.getFrom(config), 'dd MMM HH:mm')}">Some time</td>
+                <td th:text="${#temporals.format(book.getUntil(config), 'dd MMM HH:mm')}">Some time</td>
+                <td th:if="${timestamps}" th:text="${book.getFromTimestamp()}">Some timestamp</td>
+                <td th:if="${timestamps}" th:text="${book.getUntilTimestamp()}">Some timestamp</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

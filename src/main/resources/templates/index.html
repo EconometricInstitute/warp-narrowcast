@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Current Occupants</title>
+    <title>WARP Narrowcast</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,18 +11,6 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <style>
-        .location {
-            display: flex;
-            justify-content: space-between;
-            border: black solid 1px;
-            padding: 0.25em 1em 0.25em 1em;
-        }
-        .location div {
-            display: inline-block;
-        }
-    </style>
 
 </head>
 <body>
@@ -34,7 +22,14 @@
         <li><a href="empty">Empty Rooms</a></li>
         <li><a href="occupants">Current Occupancy</a></li>
         <li><a href="locations">Current Locations</a></li>
+        <li><a href="today">Today's Bookings</a></li>
     </ul>
+    <h4>Room Signs</h4>
+    <div>
+        <span th:each="room : ${rooms}">
+            <a th:href="@{rooms/{room}(room=${room})}" th:text="${room}">Some room</a>
+        </span>
+    </div>
 </div>
 
 <!-- Compiled and minified JavaScript -->
