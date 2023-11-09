@@ -130,6 +130,7 @@ public class RoomService {
                 .stream()
                 .map(Seat::getRoom)
                 .sorted()
+                .distinct()
                 .collect(Collectors.toList());
     }
 
