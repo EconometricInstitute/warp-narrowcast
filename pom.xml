@@ -10,7 +10,7 @@
     </parent>
     <groupId>nl.eur.ese.ei</groupId>
     <artifactId>warp_narrowcast</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>warp_narrowcast</name>
     <description>warp_narrowcast</description>
     <properties>
