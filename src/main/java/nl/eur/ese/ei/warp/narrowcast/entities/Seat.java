@@ -24,6 +24,12 @@ public class Seat {
 
     protected Seat() {}
 
+    public Seat(Long id, String name, boolean enabled) {
+        this.id = id;
+        this.name = name;
+        this.enabled = enabled;
+    }
+
     public String getName() {
         return name;
     }

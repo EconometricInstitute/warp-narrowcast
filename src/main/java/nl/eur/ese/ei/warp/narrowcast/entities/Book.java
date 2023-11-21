@@ -35,6 +35,14 @@ public class Book implements Comparable<Book> {
 
     protected Book() {}
 
+    public Book(Long id, User user, Seat seat, int fromTimestamp, int untilTimestamp) {
+        this.id = id;
+        this.user = user;
+        this.seat = seat;
+        this.fromTimestamp = fromTimestamp;
+        this.untilTimestamp = untilTimestamp;
+    }
+
     public long getId() {
         return id;
     }

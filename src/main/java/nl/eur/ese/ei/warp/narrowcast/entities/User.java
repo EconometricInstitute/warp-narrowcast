@@ -16,6 +16,11 @@ public class User {
     private String name;
     protected User() {}
 
+    public User(String login, String name) {
+        this.login = login;
+        this.name = name;
+    }
+
     public String getLogin() {
         return login;
     }
