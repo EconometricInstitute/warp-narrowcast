@@ -23,7 +23,7 @@
 
 <div class="container flow-text">
     <h2 class="title">Current Room Occupants</h2>
-    <div class="content">
+    <div class="content content-occupants">
         <div class="occupants entry" th:each="entry : ${entries}">
             <div class="room-label" th:text="${entry.key}">Some room</div>
             <ul>

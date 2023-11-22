@@ -5,6 +5,42 @@
     align-content: center;
 }
 
+@media screen and (min-width:0\0) and (min-resolution:+72dpi), \0screen\,screen\9 {
+    /* Ugly IE9+ only rules */
+    .content {
+        display: block;
+        column-count: 4;
+        padding: 0.5em;
+    }
+
+    .content-locations {
+        column-count: 3;
+    }
+
+    .content-occupants {
+        column-count: 5;
+    }
+
+    .content .location {
+        display: inline-table;
+        width: 100%;
+    }
+
+    .content .location div {
+        display: table-cell;
+    }
+
+    .content .location div.room-inline {
+        text-align: right;
+    }
+
+    .content .occupants {
+        display: inline-table;
+        width: 100%;
+        font-size: 85%;
+    }
+}
+
 .title {
     text-align: center;
 }

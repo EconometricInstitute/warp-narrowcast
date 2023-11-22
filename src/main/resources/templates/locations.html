@@ -23,7 +23,7 @@
 
 <div class="container flow-text">
     <h2 class="title">Current Locations</h2>
-    <div class="content">
+    <div class="content content-locations">
         <div class="location" th:each="entry : ${entries}">
             <div class="user" th:text="${entry.key}">Some user</div>
             <div class="room-inline" th:each="room : ${entry.value}" th:text="${room}">Some room</div>
