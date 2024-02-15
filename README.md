@@ -18,7 +18,9 @@ Additionally, the application also supports API endpoints that provide the same 
 as JSON. These API endpoints can be easily enabled or disabled.
 
 The application does not have any authentication mechanisms, as it is assumed access
-can be limited on a network level. However, it is should be relatively easy to secure
+to the application can be limited on a network level (e.g. only make it available to
+narrow-casting devices or on the organization's intranet).
+However, it is should be relatively easy to secure
 the application using [Spring Security](https://spring.io/projects/spring-security)
 in deployment contexts where netwerk-level access control is insufficient.
 
@@ -136,3 +138,11 @@ provides a number of [clients and methods](https://docs.spring.io/spring-framewo
 to talk to external web-services. So while some work would be needed to make translate
 data from the external service to fit the data representation of this application,
 the amount of work could be reasonable depending on the external web-application.
+
+## License and Contact
+
+This application is currently licensed under the GNU AFFERO GENERAL PUBLIC LICENSE version 3.
+The rationale is that commercial companies should not too easily benefit from this work
+without further discussion.
+For further inquiries about the state of this application, please contact
+[Paul Bouman](https://paulbouman.nl/)
