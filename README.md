@@ -20,15 +20,15 @@ as JSON. These API endpoints can be easily enabled or disabled.
 The application does not have any authentication mechanisms, as it is assumed access
 to the application can be limited on a network level (e.g. only make it available to
 narrow-casting devices or on the organization's intranet).
-However, it is should be relatively easy to secure
+However, it should be relatively easy to secure
 the application using [Spring Security](https://spring.io/projects/spring-security)
-in deployment contexts where netwerk-level access control is insufficient.
+in deployment contexts where network-level access control is insufficient.
 
 In order to limit development time the HTML-templates are kept relatively simpled
 and are only minimally styled, with some help from the [Materialize project](https://materializecss.com/).
-As we discovered after deployment that the narrowcasting software used by our university
-still uses the `MSHTML` rendering  engine, some last minute Internet Explorer support
-was added, mostly by some alternate CSS-rules.
+As we discovered after deployment that the narrow-casting software used by our university
+to display websites on big screen still uses the `MSHTML` rendering engine,
+some last minute Internet Explorer support  was added, mostly by some alternative CSS-rules.
 
 ## How does it work?
 
@@ -100,9 +100,9 @@ is the main entrypoint of the application.
 
 ## How to use it?
 
-As this is a [Spring Boot](https://spring.io/projects/spring-boot) you need to have a recent
+As this is a [Spring Boot](https://spring.io/projects/spring-boot) application you need to have a recent
 version of Java available. The build tool used is Maven, so having that is also recommended
-(although many professional Java IDE's have this built-in).
+(although many professional Java IDE's have Maven included).
 
 ```
 mvn spring-boot:run 
