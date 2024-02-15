@@ -60,17 +60,17 @@ the WARP database.
 
 The methods used to convert raw booking, seat and user data into useful information are
 performed by a service component of which the interface is defined as
-[`RoomService`](src/main/java/nl/eur/ese/ei/warp/narrowcast/services/RoomService.java)
+[`RoomService`](src/main/java/nl/eur/ese/ei/warp/narrowcast/service/RoomService.java)
 .
 Two implementations are provided in this application: the
-[`DatabaseRoomService`](src/main/java/nl/eur/ese/ei/warp/narrowcast/services/DatabaseRoomService.java)
+[`DatabaseRoomService`](src/main/java/nl/eur/ese/ei/warp/narrowcast/service/DatabaseRoomService.java)
 reads the data from a WARP database using the earlier mention repository components,
 while the
-[`MockRoomService`](src/main/java/nl/eur/ese/ei/warp/narrowcast/services/MockRoomService.java)
+[`MockRoomService`](src/main/java/nl/eur/ese/ei/warp/narrowcast/service/MockRoomService.java)
 implementations works with randomized data for demonstration purposes and does not
 depend on an actual WARP installation.
 Both service components extend the abstract class
-[`RoomServiceAdapter`](src/main/java/nl/eur/ese/ei/warp/narrowcast/services/RoomService.java)
+[`RoomServiceAdapter`](src/main/java/nl/eur/ese/ei/warp/narrowcast/service/RoomService.java)
 which does most of the algorithmic heavy lifting in figuring out the relevant information
 for a particular request.
 
