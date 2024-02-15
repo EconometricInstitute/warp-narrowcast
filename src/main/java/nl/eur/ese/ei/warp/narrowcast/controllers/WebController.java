@@ -1,5 +1,7 @@
-package nl.eur.ese.ei.warp.narrowcast;
+package nl.eur.ese.ei.warp.narrowcast.controllers;
 
+import nl.eur.ese.ei.warp.narrowcast.ConfigProperties;
+import nl.eur.ese.ei.warp.narrowcast.service.RoomService;
 import nl.eur.ese.ei.warp.narrowcast.entities.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
